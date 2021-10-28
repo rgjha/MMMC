@@ -6,6 +6,8 @@ There are currently four different codes for matrix models discussed in the arti
 The general form of the partition function is: <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{80}&space;\bg_black&space;\fn_phv&space;Z&space;=&space;\int&space;dM&space;\exp\Big[-N&space;\mbox{Tr}&space;V(M)\Big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{80}&space;\bg_black&space;\fn_phv&space;Z&space;=&space;\int&space;dM&space;\exp\Big[-N&space;\mbox{Tr}&space;V(M)\Big]" title="Z = \int dM \exp\Big[-N \mbox{Tr} V(M)\Big]" /></a>
 where `V` is the potential and `N` is the size of the Hermitian matrix. 
 
+To use the code, you need to have Python with required libraries. It is easier to just install 
+Anaconda: https://docs.anaconda.com/anaconda/install/ and it usually works well. 
 
 1. `1MM.py` - One matrix model with quartic potential defined as: <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{80}&space;\bg_black&space;\fn_phv&space;\large&space;V(M)&space;=&space;M^2/2&space;&plus;&space;gM^4/4" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{80}&space;\bg_black&space;\fn_phv&space;\large&space;V(M)&space;=&space;M^2/2&space;&plus;&space;gM^4/4" title="\large V(M) = M^2/2 + gM^4/4" /></a>. 
 If you want to change to cubic potential, you have to modify `def potential(X)`
