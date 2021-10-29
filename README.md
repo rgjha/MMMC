@@ -2,12 +2,14 @@
 
 The `python` codes in this repository are made available with https://arxiv.org/abs/XXXX.YYYYY
 
-There are currently four different codes for matrix models discussed in the article above in detail. 
+There are currently four different codes for matrix models discussed in the above article. 
 The general form of the partition function is: <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{80}&space;\bg_black&space;\fn_phv&space;Z&space;=&space;\int&space;dM&space;\exp\Big[-N&space;\mbox{Tr}&space;V(M)\Big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{80}&space;\bg_black&space;\fn_phv&space;Z&space;=&space;\int&space;dM&space;\exp\Big[-N&space;\mbox{Tr}&space;V(M)\Big]" title="Z = \int dM \exp\Big[-N \mbox{Tr} V(M)\Big]" /></a>
 where `V` is the potential and `N` is the size of the Hermitian matrix. 
 
 To use the code, you need to have Python with required libraries. It is easier to just install 
-Anaconda: https://docs.anaconda.com/anaconda/install/ and it usually works well. 
+Anaconda which is a cross-platform Python distribution for scientific computing
+available here: https://docs.anaconda.com/anaconda/install/ and it usually works well
+and should be sufficient to run every code in this repository. 
 
 1. `1MM.py` - One matrix model with quartic potential defined as: <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{80}&space;\bg_black&space;\fn_phv&space;\large&space;V(M)&space;=&space;M^2/2&space;&plus;&space;gM^4/4" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{80}&space;\bg_black&space;\fn_phv&space;\large&space;V(M)&space;=&space;M^2/2&space;&plus;&space;gM^4/4" title="\large V(M) = M^2/2 + gM^4/4" /></a>. 
 If you want to change to cubic potential, you have to modify `def potential(X)`
@@ -26,7 +28,7 @@ for 10 time units with `g = 1` and `c =  κ = 1.35` by doing `python MMC_3_4.py 
 
 
 Some models like Yang-Mills with mass terms etc. are left for the interested reader. 
-Please write to me about any bug or comments: raghav.govind.jha@gmail.com 
+Please email for any bug report or comments: raghav.govind.jha@gmail.com 
 
 
 If you find this repository useful, please cite the following paper [[1]](#1). 
@@ -34,7 +36,7 @@ If you find this repository useful, please cite the following paper [[1]](#1).
 
 Last updated: 
 Waterloo, 
-October 21, 2021
+October 29, 2021
 
 
 ## References
