@@ -30,7 +30,11 @@ Some models like Yang-Mills with mass terms etc. are left for the interested rea
 Please email for bug report and comments: raghav.govind.jha@gmail.com 
 
 
-If you find this repository useful, please consider citing the paper [[1]](#1). 
+If you find this repository useful, please consider citing the paper [[1]](#1). We paste the bibtex entry below.
+
+```bibtex
+ 
+```
 
 
 ## References
