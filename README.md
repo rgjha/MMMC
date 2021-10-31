@@ -1,6 +1,7 @@
 # MMMC
 
-The `python` codes in this repository are made available with https://arxiv.org/abs/XXXX.YYYYY
+The codes in this repository accompany the article `Introduction to Monte Carlo for Matrix Models` 
+available at https://arxiv.org/abs/XXXX.YYYYY
 
 There are currently four different codes for matrix models discussed in the above article. 
 The general form of the partition function is: <a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{80}&space;\bg_black&space;\fn_phv&space;Z&space;=&space;\int&space;dM&space;\exp\Big[-N&space;\mbox{Tr}&space;V(M)\Big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{80}&space;\bg_black&space;\fn_phv&space;Z&space;=&space;\int&space;dM&space;\exp\Big[-N&space;\mbox{Tr}&space;V(M)\Big]" title="Z = \int dM \exp\Big[-N \mbox{Tr} V(M)\Big]" /></a>
@@ -20,25 +21,23 @@ as `python 1MM.py 0 1 300 100`
 You can run an instance of `N = 300` model in symmetric phase for 10 time units by doing `python 2MM.py 0 1 300 10 1`
 
 3. `MMC_3_4.py` - Matrix chain (open or closed) models with three or four matrices. The potential is given by (for `p=4`):
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{80}&space;\bg_black&space;\fn_phv&space;\large&space;V(M_{1},M_{2},M_{3},M_{4})&space;=&space;\Bigg(\sum_{i=1}^{4}&space;-M_{i}^2&space;-&space;g&space;M_{i}^{4}&space;&plus;&space;c&space;\sum_{i=1}^{3}&space;M_{i}M_{i&plus;1}&space;&plus;&space;\kappa&space;M_{4}M_{1}&space;\Bigg)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{80}&space;\bg_black&space;\fn_phv&space;\large&space;V(M_{1},M_{2},M_{3},M_{4})&space;=&space;\Bigg(\sum_{i=1}^{4}&space;-M_{i}^2&space;-&space;g&space;M_{i}^{4}&space;&plus;&space;c&space;\sum_{i=1}^{3}&space;M_{i}M_{i&plus;1}&space;&plus;&space;\kappa&space;M_{4}M_{1}&space;\Bigg)" title="\large V(M_{1},M_{2},M_{3},M_{4}) = \Bigg(\sum_{i=1}^{4} -M_{i}^2 - g M_{i}^{4} + c \sum_{i=1}^{3} M_{i}M_{i+1} + \kappa M_{4}M_{1} \Bigg)" /></a>. If you want more than four matrices, you have to edit the code. You can run an instance of N = 300 model (note that `NMAT = 3` is hardcoded, you can change it to `NMAT = 4`) 
-for 10 time units with `g = 1` and `c =  κ = 1.35` by doing `python MMC_3_4.py 0 1 300 10 1 1.35 1.35`
+<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{80}&space;\bg_black&space;\fn_phv&space;\large&space;V(M_{1},M_{2},M_{3},M_{4})&space;=&space;\Bigg(\sum_{i=1}^{4}&space;-M_{i}^2&space;-&space;g&space;M_{i}^{4}&space;&plus;&space;c&space;\sum_{i=1}^{3}&space;M_{i}M_{i&plus;1}&space;&plus;&space;\kappa&space;M_{4}M_{1}&space;\Bigg)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{80}&space;\bg_black&space;\fn_phv&space;\large&space;V(M_{1},M_{2},M_{3},M_{4})&space;=&space;\Bigg(\sum_{i=1}^{4}&space;-M_{i}^2&space;-&space;g&space;M_{i}^{4}&space;&plus;&space;c&space;\sum_{i=1}^{3}&space;M_{i}M_{i&plus;1}&space;&plus;&space;\kappa&space;M_{4}M_{1}&space;\Bigg)" title="\large V(M_{1},M_{2},M_{3},M_{4}) = \Bigg(\sum_{i=1}^{4} -M_{i}^2 - g M_{i}^{4} + c \sum_{i=1}^{3} M_{i}M_{i+1} + \kappa M_{4}M_{1} \Bigg)" /></a>. If you want more than four matrices, you have to edit the code. You can run an instance of N = 300 model (note that `NMAT = 3` is hardcoded, you can change it to `NMAT = 4`) for 10 time units with `g = 1` and `c =  κ = 1.35` by doing `python MMC_3_4.py 0 1 300 10 1 1.35 1.35`
 
-4. `YM_type.py` - This code can be used to study Yang-Mills type models (with `D` matrices) with potential:
-<a href="https://www.codecogs.com/eqnedit.php?latex=\dpi{80}&space;\bg_black&space;\fn_phv&space;\large&space;V&space;=&space;\Bigg(&space;\sum_{i&space;\neq&space;j}[X_i,&space;X_j]^{2}\Bigg)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\dpi{80}&space;\bg_black&space;\fn_phv&space;\large&space;V&space;=&space;\Bigg(&space;\sum_{i&space;\neq&space;j}[X_i,&space;X_j]^{2}\Bigg)" title="\large V = \Bigg( \sum_{i \neq j}[X_i, X_j]^{2}\Bigg)" /></a>. You can run an instance of `N = 300` model for 10 time units for` D = 4` and `λ  = 1` by doing `python YM_type.py 0 1 300 10 4 1`
+4. `YM_type.py` - This code can be used to study Yang-Mills type models (with `D` matrices) with commutator potential. You can run an instance of `N = 300` model for 10 time units for` D = 4` and `λ  = 1` by doing `python YM_type.py 0 1 300 10 4 1`
 
 
 Some models like Yang-Mills with mass terms etc. are left for the interested reader. 
-Please email for any bug report or comments: raghav.govind.jha@gmail.com 
+Please email for bug report and comments: raghav.govind.jha@gmail.com 
 
 
-If you find this repository useful, please cite the following paper [[1]](#1). 
-
-
-Last updated: 
-Waterloo, 
-October 29, 2021
+If you find this repository useful, please consider citing the paper [[1]](#1). 
 
 
 ## References
 <a id="1">[1]</a> 
 Jha, R. G. (2021). 
+
+
+
+Last updated: 
+October 29, 2021
