@@ -3,10 +3,11 @@
 There are four codes in this repository that accompany the article `Introduction to Monte Carlo for Matrix Models` 
 available at https://arxiv.org/abs/2111.XXXXX
  
-The general form of the partition function is: ![Z = \int dM \exp\Big[-N \mbox{Tr} V(M)\Big]](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Z+%3D+%5Cint+dM+%5Cexp%5CBig%5B-N+%5Cmbox%7BTr%7D+V%28M%29%5CBig%5D)
+The general form of the partition function is: ![Z = \int dM \exp\Big[-N \text{Tr} V(M)\Big]
+](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Z+%3D+%5Cint+dM+%5Cexp%5CBig%5B-N+%5Ctext%7BTr%7D+V%28M%29%5CBig%5D%0A)
 where `V` is the potential and `N` is the size of the Hermitian matrix. 
 [Note: If you have dark theme for GitHub, this might not render correctly and similarly the potentials below. This is also a problem for Github README as
-is the non-support of LaTeX] 
+is no simple of rendering LaTeX. We are using: https://tex-image-link-generator.herokuapp.com/] 
 
 To use the code, you need Python with the required libraries. If you don't have these already, then it is easiest 
 to just install Anaconda which is a cross-platform Python distribution for scientific computing
