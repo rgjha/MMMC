@@ -6,6 +6,7 @@ from numpy.linalg import matrix_power
 import time 
 import datetime 
 import sys
+import os 
 import random
 import math
 import scipy as sp
@@ -22,12 +23,6 @@ print ("STARTED:" , datetime.datetime.now().strftime("%d %B %Y %H:%M:%S"))
 if len(sys.argv) < 8:
   print("Usage: python", str(sys.argv[0]), "READ-IN? " "SAVE-or-NOT? " "NCOL " "NITER " "g "  "c " "kappa ")
   sys.exit(1)
-if READIN not in [0,1]:
-    print ("Wrong input for READIN")
-    sys.exit(1)
-if SAVE not in [0,1]:
-    print ("Wrong input for SAVE")
-    sys.exit(1)
 
 READIN = int(sys.argv[1])
 SAVE = int(sys.argv[2])
@@ -36,6 +31,14 @@ Niters_sim = int(sys.argv[4])
 g = float(sys.argv[5])
 c = float(sys.argv[6])
 kappa = float(sys.argv[7])
+
+if READIN not in [0,1]:
+    print ("Wrong input for READIN")
+    sys.exit(1)
+if SAVE not in [0,1]:
+    print ("Wrong input for SAVE")
+    sys.exit(1)
+
 NMAT = 4
 dt = 1e-4   
 nsteps = int(1e-2/dt)
@@ -216,27 +219,32 @@ if __name__ == '__main__':
     
     
     if READIN == 0:
+        print ("Loading fresh configuration")
         for i in range (NMAT):
-            for j in range (NCOL):
-                for k in range (NCOL):
-                    X[i][j][k] = complex(0.0,0.0)
-                    
+            X[i] = 0.0
+
+  
     if READIN == 1:
-
         name_f = "config_{}MM_N{}_g{}.npy".format(NMAT, NCOL, g)
-        A = np.load(name_f)
+        if os.path.isfile(name_f) == True: 
+            print ("Reading old configuration file:", name_f)
+            A = np.load(name_f)
 
-        for i in range (NMAT):
-            for j in range (NCOL):
-                for k in range (NCOL):
-                    X[i][j][k] = A[i][j][k]
+            for i in range (NMAT):
+                for j in range (NCOL):
+                    for k in range (NCOL):
+                        X[i][j][k] = A[i][j][k]
 
-        for j in range(NMAT):
-            if np.allclose(X[j], dagger(X[j])) == False:
-                print ("Input configuration 'X' not hermitian, ", LA.norm(X[j] - dagger(X[j])), "making it so")
-                X[j] = makeH(X[j])
+            for j in range(NMAT):
+                if np.allclose(X[j], dagger(X[j])) == False:
+                    print ("Input configuration 'X' not hermitian, ", LA.norm(X[j] - dagger(X[j])), "making it so")
+                    X[j] = makeH(X[j])
 
-        print ("Read old configuration file: ", name_f)
+        else:
+            print ("Configuration not found, loaded fresh")
+            for i in range (NMAT): 
+                X[i] = 0.0
+
 
     f3 = open('t2_N%s_D%s_g%s.txt' %(NCOL,kappa,g), 'w')
     f4 = open('t4_N%s_D%s_g%s.txt' %(NCOL,kappa,g), 'w')

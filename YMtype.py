@@ -209,6 +209,7 @@ def update(X):
 if __name__ == '__main__':
 
     if READIN == 0:
+        print ("Starting from fresh")
         for i in range (NMAT):  
             X[i] = 0.0  
 
@@ -230,7 +231,7 @@ if __name__ == '__main__':
                     X[j] = makeH(X[j])
         else: 
             print ("Can't find config. file for this NCOL and LAM")
-            print ("Starting from randomized fresh")
+            print ("Starting from fresh")
             for i in range (NMAT):  
                 X[i] = 0.0
 

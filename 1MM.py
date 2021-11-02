@@ -22,7 +22,7 @@ SAVE = int(sys.argv[2])
 NCOL = int(sys.argv[3]) 
 Niters_sim = int(sys.argv[4])
 
-NMAT = 3
+NMAT = 1
 g = 1.0
 dt = 1e-3
 nsteps = int(0.5/dt) 
@@ -180,10 +180,10 @@ if __name__ == '__main__':
 		for i in range (NMAT): 
 			X[i] = 0.0  
 
+
 	if READIN == 1:
 
 		name_f = "config_1MM_N{}.npy".format(NCOL)
-
 		if os.path.isfile(name_f) == True: 
 			print ("Reading old configuration file:", name_f)
 			A = np.load(name_f)
@@ -196,8 +196,8 @@ if __name__ == '__main__':
 					print ("Input configuration 'X' not hermitian, ", LA.norm(X[j] - dagger(X[j])), "making it so")
 					X[j] = makeH(X[j])
 		else:
+			print ("Configuration not found, loaded fresh")
 			for i in range (NMAT): 
-				print ("Configuration not found, loaded fresh")
 				X[i] = 0.0
 
 

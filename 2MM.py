@@ -212,6 +212,7 @@ def update(X,acc_count):
 if __name__ == '__main__':
     
     if READIN == 0:
+        print ("Starting from fresh")
         for i in range (NMAT):
             X[i] = 0.0  
                     
@@ -231,7 +232,7 @@ if __name__ == '__main__':
                     print ("Input configuration 'X' not hermitian, ", LA.norm(X[j] - dagger(X[j])), "making it so")
                     X[j] = makeH(X[j])
         else:
-            print ("Configuration not found, loaded fresh")
+            print ("Configuration not found, loading fresh")
             for i in range (NMAT):
                 X[i] = 0.0
 
