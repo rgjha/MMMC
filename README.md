@@ -35,13 +35,14 @@ Some other models like Yang-Mills with mass terms etc. are left for the interest
 Please write to raghav.govind.jha@gmail.com for bug reports and comments. If you find this repository useful, please consider citing the paper [[1]](#1) and give this repository a star! We paste the bibtex entry below for you to copy if needed. 
 
 ```bibtex
- @misc{jha2021introduction,
-      title={Introduction to Monte Carlo for Matrix Models}, 
-      author={Raghav G. Jha},
-      year={2021},
-      eprint={2111.02410},
-      archivePrefix={arXiv},
-      primaryClass={hep-th}
+ @article{Jha:2021exo,
+    author = "Jha, Raghav G.",
+    title = "{Introduction to Monte Carlo for Matrix Models}",
+    eprint = "2111.02410",
+    archivePrefix = "arXiv",
+    primaryClass = "hep-th",
+    month = "11",
+    year = "2021"
 }
 ```
 
