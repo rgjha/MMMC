@@ -1,13 +1,13 @@
 # MMMC
 
 There are four codes in this repository that accompany the article `Introduction to Monte Carlo for Matrix Models` 
-available at https://arxiv.org/abs/2111.XXXXX
+available at https://arxiv.org/abs/2111.02410
  
 The general form of the partition function is: ![Z = \int dM \exp\Big[-N \text{Tr} V(M)\Big]
 ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Z+%3D+%5Cint+dM+%5Cexp%5CBig%5B-N+%5Ctext%7BTr%7D+V%28M%29%5CBig%5D%0A)
 where `V` is the potential and `N` is the size of the Hermitian matrix. 
 [Note: If you have dark theme for GitHub, this might not render correctly and similarly the potentials below. This is also a problem for Github README as
-is no simple of rendering LaTeX. We are using: https://tex-image-link-generator.herokuapp.com/] 
+is no simple way that I know of rendering LaTeX. For the moment, I am using: https://tex-image-link-generator.herokuapp.com/] 
 
 To use the code, you need Python with the required libraries. If you don't have these already, then it is easiest 
 to just install Anaconda which is a cross-platform Python distribution for scientific computing
@@ -27,16 +27,29 @@ You can run an instance of N = 150 model in symmetric phase for 10 time units by
 4. `YMtype.py` - This code can be used to study Yang-Mills type models (with `D` matrices) with commutator potential. You can run an instance of N = 100 model for 10 time units for` D = 4` and `λ  = 1` by doing `python YMtype.py 0 1 100 10 4 1`
 
 
-Some other models like Yang-Mills with mass terms etc. are left for the interested reader. Please send an email to raghav.govind.jha@gmail.com for bug reports and comments. If you find this repository useful, please consider citing the paper [[1]](#1) and give this repository a star! We paste the bibtex entry below for you to copy if needed. 
+Some other models like Yang-Mills with mass terms etc. are left for the interested reader. 
+
+
+## Contact, Cite et al. 
+
+Please write to raghav.govind.jha@gmail.com for bug reports and comments. If you find this repository useful, please consider citing the paper [[1]](#1) and give this repository a star! We paste the bibtex entry below for you to copy if needed. 
 
 ```bibtex
  
 ```
 
+
+## About this work
+
+This work started when the author was invited to give set of lectures on some numerical topic at a summer conference organized at Rensselaer Polytechnic institute (RPI). The author decided to talk on "Numerical aspects of matrix models". After few months, the author noticed a new paper by Volodya Kazakov & Zechuan Zheng: https://arxiv.org/abs/2108.04830. They applied numerical bootstrap to an unsolved matrix model and claimed several digits of precision for the moment of matrices. Volodya gave a talk at Perimeter and after the talk, I pulled my lecture codes and studied this model and found very good agreement with their results. I showed this to Pedro Vieira and he suggested that it would be nice to check other results in that paper and then write an introduction giving all the codes which I used so that future bootstrappers could check their result readily if required. You can see the reference of this work in the talk starting at 1:05:36 by Kazakov, available here: https://www.youtube.com/watch?v=34z3xE11ycY&t=3936s&ab_channel=BootstrapCollaboration about two weeks before the paper was uploaded on arXiv. 
+
+
+
 ## References
 <a id="1">[1]</a> 
-Jha, R. G. (2021). 
+R. G. Jha, Introduction to Monte Carlo for Matrix Models, arXiv:2111.02410 
+
 
 
 Last updated: 
-November 02, 2021
+November 04, 2021
