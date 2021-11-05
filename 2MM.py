@@ -54,6 +54,9 @@ if READIN not in [0,1]:
 if SAVE not in [0,1]:
     print ("Wrong input for SAVE")
     sys.exit(1)
+if ZSYM not in [0,1]:
+    print ("Wrong input for symmetry choice")
+    sys.exit(1)
 
 print ("Hoppe type %2.0f-matrix model"%NMAT)
 print ("NCOL = " "%3.0f " ","  " g = %2.4f , h = %2.4f " % (NCOL, g, h))
