@@ -41,6 +41,7 @@ Please write to raghav.govind.jha@gmail.com for bug reports and comments. If you
     eprint = "2111.02410",
     archivePrefix = "arXiv",
     primaryClass = "hep-th",
+    doi = "10.21468/SciPostPhysLectNotes.46",
     month = "11",
     year = "2021"
 }
@@ -55,7 +56,7 @@ This work started when the author was invited to give set of lectures on some nu
 
 ## References
 <a id="1">[1]</a> 
-R. G. Jha, Introduction to Monte Carlo for Matrix Models, arXiv:2111.02410 
+R. G. Jha, Introduction to Monte Carlo for Matrix Models, SciPost Physics Lecture Notes 46 (2022), arXiv:2111.02410 
 
 
 
