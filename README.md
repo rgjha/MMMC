@@ -1,7 +1,7 @@
 # MMMC
 
 There are four codes in this repository that accompany the article `Introduction to Monte Carlo for Matrix Models` 
-available at https://arxiv.org/abs/2111.02410
+available at https://arxiv.org/abs/2111.02410 or at https://scipost.org/10.21468/SciPostPhysLectNotes.46
  
 The general form of the partition function is: ![Z = \int dM \exp\Big[-N \text{Tr} V(M)\Big]
 ](https://render.githubusercontent.com/render/math?math=%5Ctextstyle+Z+%3D+%5Cint+dM+%5Cexp%5CBig%5B-N+%5Ctext%7BTr%7D+V%28M%29%5CBig%5D%0A)
