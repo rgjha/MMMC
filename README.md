@@ -5,7 +5,7 @@ available at https://arxiv.org/abs/2111.02410 or at https://scipost.org/10.21468
  
 The general form of the partition function is: 
  ```math
-Z = \int dM \exp\Big[-N \text{Tr} V(M)\Big,
+Z = \int dM \exp\Big[-N \text{Tr} V(M)\Big],
 ```
 where `V` is the potential and `N` is the size of the Hermitian matrix. 
 
